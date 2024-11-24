@@ -1,0 +1,137 @@
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+body {
+  width: 100%;
+  height: 500px;
+  /* border: 1px solid red; */
+}
+.background {
+  width: 100%;
+  height: 100%;
+  /* border: 2px solid black; */
+  background-image: url(./images/background.jpg);
+  background-position: center;
+  background-size: cover;
+  position: absolute;
+}
+.background > h1 {
+  width: 50%;
+  /* text-align: center; */
+  margin: 30px auto;
+  font-size: 50px;
+  display: flex;
+  align-items: center;
+  justify-content: end;
+  color: #fff;
+}
+.background > .form-box {
+  width: 450px;
+  height: 380px;
+  position: absolute;
+  top: 140px;
+  right: 100px;
+  /* position: absolute; */
+  background: #fff;
+  border-radius: 10px;
+  box-shadow: 0px 0px 10px black;
+}
+.background > .form-box > h1 {
+  text-align: center;
+  margin-top: 20px;
+  font-family: Arial, Helvetica, sans-serif;
+}
+.background > .form-box > h4 {
+  text-align: center;
+  margin-top: 20px;
+  color: green;
+}
+form {
+  width: 100%;
+  height: 75%;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  padding: 30px;
+}
+form > .stu-detail {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 10px;
+  gap: 10px;
+  background-color: rgb(245, 243, 243);
+  border-radius: 20px;
+  /* border: 1px solid black ; */
+}
+.fa-user,
+.fa-envelope,
+.fa-phone,
+.fa-lock {
+  font-size: 20px;
+  margin: 0 10px;
+}
+form > .stu-detail > input {
+  width: 100%;
+  /* height: 100%; */
+  border: none;
+  outline: none;
+  background: transparent;
+}
+form > .stu-detail > input[placeholder] {
+  font-size: 15px;
+  font-weight: 500;
+}
+form > input {
+  width: 150px;
+  position: relative;
+  left: 125px;
+  margin: 15px 0 10px 0;
+  padding: 15px 20px;
+  border-radius: 50px;
+  background: linear-gradient(to right, #b53e03, #e5671e, #ffbb00);
+  border: none;
+  color: #fff;
+  font-size: 17px;
+  font-weight: 1.5rem;
+}
+.register {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+/* ==================================media query for responsiveness============================================= */
+
+/* Responsive Media Query */
+@media (max-width: 768px) {
+  .background > h1 {
+    width: 100%;
+    font-size: 36px;
+    justify-content: center;
+  }
+
+  .background > .form-box {
+    width: 90%;
+    height: auto;
+    top: 20%;
+    left: 50%;
+    right: auto;
+    transform: translateX(-50%);
+    padding: 20px;
+  }
+
+  form {
+    padding: 20px;
+    gap: 15px;
+  }
+
+  form > input[type="submit"] {
+    width: 100%;
+    left: 0;
+    padding: 12px 20px;
+    font-size: 16px;
+  }
+}
